@@ -22,7 +22,6 @@ const deploy = async () => {
   const deploymentResult = await new web3.eth.Contract(abi)
     .deploy({
       data: evm.bytecode.object,
-      arguments: ["Deploying on the test network"],
     })
     .send({ gas: "1000000", from: accounts[0] });
 
